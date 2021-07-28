@@ -8,31 +8,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>  
-    <section class="coming-soon">
-        <h1>Digimon TCG Card Search Tool</h1>      
-            <div class="countdown">
-                <!--Countdown Timer until new expansion set release date-->
-                <div class="release-countdown">
-                    <div class="countdown-days">
-                        <p class="days">Time</p>
-                        <p>Days</p>
-                    </div>
-                    <div class="countdown-hours">
-                        <p class="hours">Time</p>
-                        <p>Hours</p>
-                    </div>
-                    <div class="countdown-minutes">
-                        <p class="minutes">Time</p>
-                        <p>Minutes</p>
-                    </div>
-                    <div class="countdown-seconds">
-                        <p class="seconds">Time</p>
-                        <p>Seconds</p>
-                    </div>
-                </div>
+    <h1>Digimon TCG Card Search Tool</h1>  
+    <h3 class="set-release-title">Battle of Omni card set releases in............</h3>    
+    <div class="countdown">
+        <!--Countdown Timer until new expansion set release date-->
+        <div class="release-countdown">
+            <div class="countdown-days">
+                <p class="days">Days</p>
+                <p>Days</p>
             </div>
-        
-    </section>
+            <div class="countdown-hours">
+                <p class="hours">Hours</p>
+                <p>Hours</p>
+            </div>
+            <div class="countdown-minutes">
+                <p class="minutes">Minutes</p>
+                <p>Minutes</p>
+            </div>
+            <div class="countdown-seconds">
+                <p class="seconds">Seconds</p>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
     <!--Digimon card search bar-->
     <form action="">
         <input type="text" placeholder="Search DIGIMON" name="search">
@@ -41,9 +39,9 @@
     <div id="deck-form">
         <form>
             <label for="deck-card-input">Deck:</label>
-            <input type="text" id="deck" name="fname"<br>
+            <input type="text" id="deck" name="fname" size="3">
             <label for="digitama-card-input">Digitama:</label>
-            <input type="text" id="digitama" name="lname">
+            <input type="text" id="digitama" name="lname" size="3">
             <input type="button" value="Submit" onclick="deckCalc()">
         </form>
     </div>
