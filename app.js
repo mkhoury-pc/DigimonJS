@@ -1,3 +1,4 @@
+//Fetch from Digimon TCG API
 var requestOptions = {
     method: 'GET',
     redirect: 'follow'
@@ -32,3 +33,23 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
+
+//Deck Counter Function
+var deckComp = 55;
+
+function deckCalc(deck, digitama) {
+  var deck = parseInt(document.getElementById('deck').value);
+  var digitama = parseInt(document.getElementById('digitama').value);
+  var deckDiff = deckComp - (deck + digitama);
+  
+  if (deckDiff >= 1) {
+    alert(`You need ${deckDiff}more cards!`);
+  } else if (deckDiff < 0) {
+    deckDiff = Math.abs(deckDiff);
+    alert(`You need ${deckDiff} less cards!`);
+  } else if (deckDiff === 0) {
+    alert(`Your deck is ready to play!  Good luck!`);
+  } else {
+    alert('ERROR!  Enter whole numbers only.');
+  }  
+}
