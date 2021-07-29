@@ -32,9 +32,10 @@
         </div>
     </div>
     <!--Digimon card search bar-->
-    <form action="">
-        <input type="text" placeholder="Search DIGIMON" name="search">
-        <button type="submit">Search</button>
+    <form>
+        <input type="text" id="card-input" placeholder="Enter DIGIMON name or Card#" size="23" name="search">
+        <input type="button" value="submit" onclick="cardSearch()">
+        <div id="card-display"></div>
     </form>
     <div id="deck-form">
         <form>
@@ -42,8 +43,9 @@
             <input type="text" id="deck" name="fname" size="3">
             <label for="digitama-card-input">Digitama:</label>
             <input type="text" id="digitama" name="lname" size="3">
-            <input type="button" value="Submit" onclick="deckCalc()">
+            <input type="button" value="submit" onclick="deckCalc()">
         </form>
+        <p class="card-count"></p>
     </div>
     <script src="app.js"></script>
 </body>
