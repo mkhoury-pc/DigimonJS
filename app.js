@@ -4,14 +4,21 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-
-
 function cardSearch() {
   var card = document.getElementById('card-input').value;
   fetch(`https://digimoncard.io/api-public/search.php?n=${card}`, requestOptions)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => displayCard(data[0].image_url))
     .catch(error => console.log('error', error));
+}
+
+const cardDisplay = document.getElementById("card-display")
+
+function displayCard(data) {
+  let html = `
+    <img src='${data}' alt>
+  `;
+  cardDisplay.innerHTML = html;
 }
 
 //Countdown function
