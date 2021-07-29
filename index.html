@@ -8,45 +8,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>  
-    <h1>Digimon TCG Card Search Tool</h1>  
-    <h3 class="set-release-title">Battle of Omni card set releases in............</h3>    
-    <div class="countdown">
-        <!--Countdown Timer until new expansion set release date-->
-        <div class="release-countdown">
-            <div class="countdown-days">
-                <p class="days">Days</p>
-                <p>Days</p>
-            </div>
-            <div class="countdown-hours">
-                <p class="hours">Hours</p>
-                <p>Hours</p>
-            </div>
-            <div class="countdown-minutes">
-                <p class="minutes">Minutes</p>
-                <p>Minutes</p>
-            </div>
-            <div class="countdown-seconds">
-                <p class="seconds">Seconds</p>
-                <p>Seconds</p>
+    <div id="content">
+        <h1>Digimon TCG Card Search Tool</h1>  
+        <h3 class="set-release-title">Battle of Omni card set releases in............</h3>    
+        <div class="countdown">
+            <!--Countdown Timer until new expansion set release date-->
+            <div class="release-countdown">
+                <div class="countdown-days">
+                    <p class="days">Days</p>
+                    <p>Days</p>
+                </div>
+                <div class="countdown-hours">
+                    <p class="hours">Hours</p>
+                    <p>Hours</p>
+                </div>
+                <div class="countdown-minutes">
+                    <p class="minutes">Minutes</p>
+                    <p>Minutes</p>
+                </div>
+                <div class="countdown-seconds">
+                    <p class="seconds">Seconds</p>
+                    <p>Seconds</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!--Digimon card search bar-->
-    <form>
-        <input type="text" id="card-input" placeholder="Enter DIGIMON name or Card#" size="23" name="search">
-        <input type="button" value="submit" onclick="cardSearch()">
-        <div id="card-display"></div>
-    </form>
-    <div id="deck-form">
+        <!--Digimon card search bar-->
         <form>
-            <label for="deck-card-input">Deck:</label>
-            <input type="text" id="deck" name="fname" size="3">
-            <label for="digitama-card-input">Digitama:</label>
-            <input type="text" id="digitama" name="lname" size="3">
-            <input type="button" value="submit" onclick="deckCalc()">
+            <div class="search-bar">
+                <input type="text" id="card-input" placeholder="Enter DIGIMON name or Card#" size="23" name="search">
+                <input type="button" value="submit" onclick="cardSearch()">
+            </div>
+            <div id="card-display"></div>
         </form>
-        <p class="card-count"></p>
     </div>
+    <form class="deck-counter">
+        <label for="deck-card-input">Deck:</label>
+        <input type="text" id="deck" name="fname" size="3">
+        <label for="digitama-card-input">Digitama:</label>
+        <input type="text" id="digitama" name="lname" size="3">
+        <input type="button" value="submit" onclick="deckCalc()">
+    </form>
+    <p class="card-count"></p>
     <script src="app.js"></script>
 </body>
 </html>
