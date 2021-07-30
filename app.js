@@ -10,7 +10,7 @@ function cardSearch() {
     .then(response => response.json())
     .then(data => displayCard(data[0].image_url))
     .catch(error => console.log('error', error));
-  }
+}
 
 const cardDisplay = document.getElementById("card-display")
 
