@@ -16,9 +16,8 @@ h1 {
 
 .release-countdown {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: left;
     text-align: center;
 }
 
@@ -38,7 +37,7 @@ h1 {
     text-align: center;
 }
 
-.deck-counter {
+#deck-counter {
     margin-top: 20px;
 }
 
@@ -49,9 +48,57 @@ h1 {
 
 /* Media queries */
 @media only screen and (min-width: 480px) {
+    #deck-counter,
+    .card-count {
+        text-align: center;
+    }
 
+    .set-release-title {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-days,
+    .countdown-hours,
+    .countdown-minutes,
+    .countdown-seconds {
+        font-size: 1.25rem;
+    }
+
+    .release-countdown {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 @media only screen and (min-width: 720px) {
+    .countdown-days,
+    .countdown-hours,
+    .countdown-minutes,
+    .countdown-seconds {
+        font-size: 1.5rem;
+    }
 
+    .set-release-title {
+        font-size: 1.75rem;
+    }
+
+    .release-countdown {
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .container,
+    .container-2 {
+        display: flex;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+    
+
+    #deck-counter {
+        margin-right: 15px;
+    }
 }
